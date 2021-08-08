@@ -1,27 +1,29 @@
 <main class="home">
-  <h1>
-    Записаться на мастер класс
-	</h1>
-	<form class="home__form" name="contact" method="POST" data-netlify="true" netlify-honeypot="second-name">
-		<p>
-			<label>* Ваше имя:</label><br/>
-			<input required type="text" name="name" />
-		</p>
-		<p style="display: none;">
-			<input name="second-name" />
-		</p>
-		<p>
-			<label>* Укажите E-mail или Instagram профиль:</label><br/>
-			<input required type="text" name="email" />
-		</p>
-		<p>
-			<label>Сообщение:</label><br/>
-			<textarea name="message"></textarea>
-		</p>
-		<p>
-			<button type="submit">Отправить</button>
-		</p>
-	</form>
+  <article class="home__content">
+		<h1>
+			Записаться на мастер класс
+		</h1>
+		<form class="home__form" name="contact" method="POST" data-netlify="true" netlify-honeypot="second-name">
+			<p>
+				<label for="name">* Ваше имя:</label><br/>
+				<input id="name" required type="text" name="name" />
+			</p>
+			<p style="display: none;">
+				<input name="second-name" />
+			</p>
+			<p>
+				<label for="email">* Укажите E-mail или Instagram профиль:</label><br/>
+				<input id="email" required type="text" name="email" />
+			</p>
+			<p>
+				<label for="message">Сообщение:</label><br/>
+				<textarea id="message" name="message"></textarea>
+			</p>
+			<p>
+				<button type="submit">Отправить</button>
+			</p>
+		</form>
+  </article>
 </main>
 
 {% stylesheet 'scss' %}
@@ -38,7 +40,9 @@
 		}
 
     &__form {
-      font-size: 25px;
+			padding: 10px;
+
+      font-size: 20px;
 
 			input {
 				width: 100%;
