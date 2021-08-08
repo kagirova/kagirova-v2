@@ -1,0 +1,49 @@
+<main class="home">
+  <div class="home__links">
+    <a class="link" rel="noopener noreferrer" href="/whatsapp">
+      <div class="home__links__link">Купить посуду ручной работы</div>
+    </a>
+    <a class="link" rel="noopener noreferrer" href="/order-class">
+      <div class="home__links__link">Записаться на мастер класс</div>
+    </a>
+  </div>
+</main>
+
+{% stylesheet 'scss' %}
+  // Import sass from your styles directory
+  @import "mixins";
+
+  .home {
+    @include container;
+
+    margin-bottom: 4rem;
+
+    &__links {
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto;
+
+      > a {
+        text-decoration: none;
+      }
+
+      &__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 60px;
+        background-color: #512f4e;
+        color: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        border-radius: 12px;
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+{% endstylesheet %}

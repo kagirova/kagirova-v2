@@ -1,0 +1,58 @@
+<main class="home">
+  <h1>
+    Записаться на мастер класс
+	</h1>
+	<form class="home__form" name="contact" method="POST" data-netlify="true" netlify-honeypot="second-name">
+		<p>
+			<label>* Ваше имя:</label><br/>
+			<input required type="text" name="name" />
+		</p>
+		<p style="display: none;">
+			<input name="second-name" />
+		</p>
+		<p>
+			<label>* Укажите E-mail или Instagram профиль:</label><br/>
+			<input required type="text" name="email" />
+		</p>
+		<p>
+			<label>Сообщение:</label><br/>
+			<textarea name="message"></textarea>
+		</p>
+		<input type="hidden" name="form-name" value="order-class">
+		<p>
+			<button type="submit">Отправить</button>
+		</p>
+	</form>
+</main>
+
+{% stylesheet 'scss' %}
+  // Import sass from your styles directory
+  @import "mixins";
+
+  .home {
+    @include container;
+
+    margin-bottom: 4rem;
+
+		> h1 {
+      text-align: center;
+		}
+
+    &__form {
+      font-size: 25px;
+
+			input {
+				width: 100%;
+			}
+
+			textarea {
+				width: 100%;
+			}
+
+			button {
+				width: 100%;
+				padding: 10px;
+			}
+    }
+  }
+{% endstylesheet %}
