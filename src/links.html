@@ -1,4 +1,7 @@
 <main class="home">
+  <div class="home__avatar">
+    {% picture 'maria.jpg', 'Maria Kagirova' %}
+  </div>
   <div class="home__links">
     <a class="link" rel="noopener noreferrer" href="/whatsapp">
       <div class="home__links__link">Купить посуду ручной работы</div>
@@ -25,7 +28,24 @@
   .home {
     @include container;
 
+    margin-top: 2rem;
     margin-bottom: 4rem;
+
+    &__avatar {
+
+      max-width: 200px;
+      margin: 0 auto;
+      padding-bottom: 1rem;
+
+      picture {
+        border-radius: 50%;
+      }
+
+      img {
+        border-radius: 50%;
+      }
+
+    }
 
     &__links {
       width: 100%;
